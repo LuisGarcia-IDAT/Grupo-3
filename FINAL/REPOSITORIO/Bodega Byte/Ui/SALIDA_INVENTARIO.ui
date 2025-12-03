@@ -1,0 +1,1122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>774</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+    background-color: #FFFFFF;  /* Fondo blanco */
+}</string>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonIconOnly</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="frameCabecera">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>761</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="3" column="0" colspan="2">
+      <widget class="QLineEdit" name="lineEdit_132">
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+    background-color: #FFFFFF;   /* Fondo blanco */
+    color: #000000;              /* Texto negro */
+    border: 2px solid #8000FF;   /* Borde morado */
+    border-radius: 5px;
+    padding: 3px 5px;            /* Espaciado interno */
+    font-weight: bold;            /* Negrita opcional */
+    font-size: 8pt;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Consumo Nro: 01VNT2</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="3" colspan="3">
+      <widget class="QComboBox" name="comboBox">
+       <property name="styleSheet">
+        <string notr="true">QComboBox {
+    background-color: #8000FF;   /* Fondo morado */
+    color: #FFFFFF;              /* Texto blanco */
+    border: white;   /* Borde negro */
+    border-radius: 5px;
+    padding: 3px 10px;
+    min-width: 75px;
+}
+
+/* Flecha de desplegable */
+QComboBox::down-arrow {
+    image:  /* O usa un icono blanco si quieres */
+    width: 12px;
+    height: 12px;
+}
+
+/* Lista desplegable */
+QComboBox QAbstractItemView {
+    background-color: #FFFFFF; /* Fondo de la lista blanca */
+    color: #000000;            /* Texto negro en la lista */
+    selection-background-color: #8000FF; /* Fondo morado al seleccionar */
+    selection-color: #FFFFFF;  /* Texto blanco al seleccionar */
+    border: 1px solid #8000FF; /* Borde morado */
+    outline: 0;
+}</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Estado:</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Contado</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Credito</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="0" column="0" colspan="2">
+      <widget class="QLineEdit" name="txtBuscarSalida">
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+    background-color: #FFFFFF;   /* Fondo blanco */
+    color: #000000;              /* Texto negro */
+    border: 2px solid #8000FF;   /* Borde morado */
+    border-radius: 5px;
+    padding: 3px 5px;            /* Espaciado interno */
+    font-weight: bold;            /* Negrita opcional */
+    font-size: 8pt;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Buscar:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="6">
+      <widget class="QComboBox" name="cbTipoMovimiento">
+       <property name="styleSheet">
+        <string notr="true">QComboBox {
+    background-color: #8000FF;   /* Fondo morado */
+    color: #FFFFFF;              /* Texto blanco */
+    border: white;   /* Borde negro */
+    border-radius: 5px;
+    padding: 3px 10px;
+    min-width: 75px;
+}
+
+/* Flecha de desplegable */
+QComboBox::down-arrow {
+    image:  /* O usa un icono blanco si quieres */
+    width: 12px;
+    height: 12px;
+}
+
+/* Lista desplegable */
+QComboBox QAbstractItemView {
+    background-color: #FFFFFF; /* Fondo de la lista blanca */
+    color: #000000;            /* Texto negro en la lista */
+    selection-background-color: #8000FF; /* Fondo morado al seleccionar */
+    selection-color: #FFFFFF;  /* Texto blanco al seleccionar */
+    border: 1px solid #8000FF; /* Borde morado */
+    outline: 0;
+}</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Tipo:</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Credito</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Contado</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLineEdit" name="txtCodigoProducto">
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+    background-color: #FFFFFF;   /* Fondo blanco */
+    color: #000000;              /* Texto negro */
+    border: 2px solid #8000FF;   /* Borde morado */
+    border-radius: 5px;
+    padding: 3px 5px;            /* Espaciado interno */
+    font-weight: bold;            /* Negrita opcional */
+    font-size: 8pt;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Codigo: LIC000101</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="3" colspan="6">
+      <widget class="QLineEdit" name="lineEdit_133">
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+    background-color: #FFFFFF;   /* Fondo blanco */
+    color: #000000;              /* Texto negro */
+    border: 2px solid #8000FF;   /* Borde morado */
+    border-radius: 5px;
+    padding: 3px 5px;            /* Espaciado interno */
+    font-weight: bold;            /* Negrita opcional */
+    font-size: 8pt;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Destino: Luis Kristian Román García</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="6">
+      <widget class="QComboBox" name="comboBox_3">
+       <property name="styleSheet">
+        <string notr="true">QComboBox {
+    background-color: #8000FF;   /* Fondo morado */
+    color: #FFFFFF;              /* Texto blanco */
+    border: white;   /* Borde negro */
+    border-radius: 5px;
+    padding: 3px 10px;
+    min-width: 75px;
+}
+
+/* Flecha de desplegable */
+QComboBox::down-arrow {
+    image:  /* O usa un icono blanco si quieres */
+    width: 12px;
+    height: 12px;
+}
+
+/* Lista desplegable */
+QComboBox QAbstractItemView {
+    background-color: #FFFFFF; /* Fondo de la lista blanca */
+    color: #000000;            /* Texto negro en la lista */
+    selection-background-color: #8000FF; /* Fondo morado al seleccionar */
+    selection-color: #FFFFFF;  /* Texto blanco al seleccionar */
+    border: 1px solid #8000FF; /* Borde morado */
+    outline: 0;
+}</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Metodo de pago:</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Efectivo</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Tarjeta</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Yape</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Plin</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Transferencia</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="7" column="6">
+      <widget class="QLabel" name="lblTotal">
+       <property name="styleSheet">
+        <string notr="true">color: #000000;       /* negro */
+font-weight: bold;     /* negrita */
+font-family: Arial;    /* opcional, tipo de letra */
+font-size: 13pt;       /* opcional, tamaño */</string>
+       </property>
+       <property name="text">
+        <string>Facturacion Total: S/ 0.00</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="5">
+      <widget class="QDateEdit" name="dateEdit">
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="date">
+        <date>
+         <year>2025</year>
+         <month>10</month>
+         <day>26</day>
+        </date>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="4">
+      <widget class="QToolButton" name="toolButton">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: rgb(85, 170, 0);  /* morado */
+    color: white;               /* texto blanco */
+    font-weight: bold;           /* negrita */
+    border-radius: 5px;          /* bordes redondeados */
+    padding: 5px 10px;           /* padding interno */
+}
+
+QPushButton:hover {
+    background-color: rgb(85, 170, 127);   /* morado más claro al pasar el mouse */
+}</string>
+       </property>
+       <property name="text">
+        <string>🔍 </string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="3" colspan="3">
+      <widget class="QLineEdit" name="lineEdit_136">
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+    background-color: #FFFFFF;   /* Fondo blanco */
+    color: #000000;              /* Texto negro */
+    border: 2px solid #8000FF;   /* Borde morado */
+    border-radius: 5px;
+    padding: 3px 5px;            /* Espaciado interno */
+    font-weight: bold;            /* Negrita opcional */
+    font-size: 8pt;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Nro de Comprobante: ----</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QPlainTextEdit" name="plainTextEdit">
+       <property name="styleSheet">
+        <string notr="true">QPlainTextEdit {
+    background-color: #FFFFFF;    /* Fondo blanco */
+    color: #8000FF;               /* Texto morado */
+    border: 2px solid #8000FF;    /* Borde morado */
+    border-radius: 5px;           /* Bordes redondeados */
+    padding: 5px;
+    selection-background-color: #8000FF; /* Fondo morado al seleccionar texto */
+    selection-color: #FFFFFF;     /* Texto blanco al seleccionar */
+}
+</string>
+       </property>
+       <property name="plainText">
+        <string>Observación:</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QTabWidget" name="tabVentas">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>300</y>
+      <width>761</width>
+      <height>361</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/* Fondo general de la pestaña */
+QTabWidget::pane {
+    background-color: #FFFFFF; /* Fondo blanco del panel */
+    border: 2px solid #8000FF; /* Borde morado */
+    border-radius: 5px;
+}
+
+/* Etiquetas de las pestañas */
+QTabBar::tab {
+    background: #8000FF;       /* Morado */
+    color: #FFFFFF;            /* Texto blanco */
+    font-weight: bold;
+    padding: 5px 15px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+/* Pestaña seleccionada */
+QTabBar::tab:selected {
+    background: #A64DFF;       /* Morado más claro */
+    color: #FFFFFF;
+}
+
+/* Pestaña no seleccionada */
+QTabBar::tab:!selected {
+    background: #8000FF;       /* Morado */
+    color: #FFFFFF;
+}
+
+/* Separación entre pestañas */
+QTabBar::tab {
+    margin-right: 2px;
+}
+
+/* Contenido interno de la pestaña */
+QTabWidget QWidget {
+    background-color: #FFFFFF;  /* Fondo blanco dentro de la pestaña */
+}
+</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="Ventas">
+     <property name="contextMenuPolicy">
+      <enum>Qt::CustomContextMenu</enum>
+     </property>
+     <attribute name="title">
+      <string>Ventas</string>
+     </attribute>
+     <widget class="QFrame" name="frameVentas">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>761</width>
+        <height>261</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QTableWidget" name="tblVentas">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>711</width>
+         <height>221</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QHeaderView::section {
+    background-color: #8000FF; /* morado */
+    color: white;             /* texto blanco */
+    font-weight: bold;
+    border: 1px solid #rgb(0, 0,0); /* borde verde */
+}
+QTableWidget {
+    background-color: #FFFFFF; /* fondo blanco */
+    gridline-color: #rgb(0, 0, 0);   /* líneas verdes */
+    font: 10pt &quot;Arial&quot;;
+    color: black;
+}
+
+QTableWidget::item {
+    border: 1px solid rgb(0, 0, 0);
+}</string>
+       </property>
+       <row>
+        <property name="text">
+         <string>1</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>2</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>3</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>4</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>5</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>6</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>7</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>8</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>9</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>10</string>
+        </property>
+       </row>
+       <column>
+        <property name="text">
+         <string>DOCUMENTO</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>TIPO</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>CODIGO</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>PRODUCTO</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>ESTADO</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>DESTINO</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>P.TOTAL</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>FECHA</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>OBSERV.</string>
+        </property>
+       </column>
+       <item row="0" column="0">
+        <property name="text">
+         <string>01VNT01</string>
+        </property>
+       </item>
+       <item row="0" column="1">
+        <property name="text">
+         <string>VENTA</string>
+        </property>
+       </item>
+       <item row="0" column="2">
+        <property name="text">
+         <string>LIC000101</string>
+        </property>
+       </item>
+       <item row="0" column="3">
+        <property name="text">
+         <string>Pisco Acholado</string>
+        </property>
+       </item>
+       <item row="0" column="4">
+        <property name="text">
+         <string>CREDITO</string>
+        </property>
+       </item>
+       <item row="0" column="5">
+        <property name="text">
+         <string>Luis Garcia</string>
+        </property>
+       </item>
+       <item row="0" column="6">
+        <property name="text">
+         <string>S/ 120.00</string>
+        </property>
+       </item>
+       <item row="0" column="7">
+        <property name="text">
+         <string>20-oct-25</string>
+        </property>
+       </item>
+       <item row="0" column="8">
+        <property name="text">
+         <string>Pagará el 28/10</string>
+        </property>
+       </item>
+       <item row="1" column="0">
+        <property name="text">
+         <string>01VNT02</string>
+        </property>
+       </item>
+       <item row="1" column="1">
+        <property name="text">
+         <string>VENTA</string>
+        </property>
+       </item>
+       <item row="1" column="2">
+        <property name="text">
+         <string>BEB000201</string>
+        </property>
+       </item>
+       <item row="1" column="3">
+        <property name="text">
+         <string>Gaseosa Inca Kola 1L</string>
+        </property>
+       </item>
+       <item row="1" column="4">
+        <property name="text">
+         <string>CREDITO</string>
+        </property>
+       </item>
+       <item row="1" column="5">
+        <property name="text">
+         <string>Juan Perez</string>
+        </property>
+       </item>
+       <item row="1" column="6">
+        <property name="text">
+         <string>S/ 9.00</string>
+        </property>
+       </item>
+       <item row="1" column="7">
+        <property name="text">
+         <string>23-oct-25</string>
+        </property>
+       </item>
+       <item row="1" column="8">
+        <property name="text">
+         <string>-</string>
+        </property>
+       </item>
+       <item row="2" column="0">
+        <property name="text">
+         <string>01VNT03</string>
+        </property>
+       </item>
+       <item row="2" column="1">
+        <property name="text">
+         <string>VENTA</string>
+        </property>
+       </item>
+       <item row="2" column="2">
+        <property name="text">
+         <string>SNK000315</string>
+        </property>
+       </item>
+       <item row="2" column="3">
+        <property name="text">
+         <string>Galletas Casino</string>
+        </property>
+       </item>
+       <item row="2" column="4">
+        <property name="text">
+         <string>CONTADO</string>
+        </property>
+       </item>
+       <item row="2" column="5">
+        <property name="text">
+         <string>Kristian Cano</string>
+        </property>
+       </item>
+       <item row="2" column="6">
+        <property name="text">
+         <string>S/ 6.00</string>
+        </property>
+       </item>
+       <item row="2" column="7">
+        <property name="text">
+         <string>25-oct-25</string>
+        </property>
+       </item>
+       <item row="2" column="8">
+        <property name="text">
+         <string>-</string>
+        </property>
+       </item>
+       <item row="3" column="0">
+        <property name="text">
+         <string>01VNT04</string>
+        </property>
+       </item>
+       <item row="3" column="1">
+        <property name="text">
+         <string>VENTA</string>
+        </property>
+       </item>
+       <item row="3" column="2">
+        <property name="text">
+         <string>LIC000102</string>
+        </property>
+       </item>
+       <item row="3" column="3">
+        <property name="text">
+         <string>Cerveza Pilsen 620ml</string>
+        </property>
+       </item>
+       <item row="3" column="4">
+        <property name="text">
+         <string>CREDITO</string>
+        </property>
+       </item>
+       <item row="3" column="5">
+        <property name="text">
+         <string>Roman Fernandez</string>
+        </property>
+       </item>
+       <item row="3" column="6">
+        <property name="text">
+         <string>S/ 60.00</string>
+        </property>
+       </item>
+       <item row="3" column="7">
+        <property name="text">
+         <string>25-oct-25</string>
+        </property>
+       </item>
+       <item row="3" column="8">
+        <property name="text">
+         <string>Pago pendiente</string>
+        </property>
+       </item>
+       <item row="4" column="0">
+        <property name="text">
+         <string>01VNT05</string>
+        </property>
+       </item>
+       <item row="4" column="1">
+        <property name="text">
+         <string>VENTA</string>
+        </property>
+       </item>
+       <item row="4" column="2">
+        <property name="text">
+         <string>LIM000501</string>
+        </property>
+       </item>
+       <item row="4" column="3">
+        <property name="text">
+         <string>Detergente Bolívar 1kg</string>
+        </property>
+       </item>
+       <item row="4" column="4">
+        <property name="text">
+         <string>CREDITO</string>
+        </property>
+       </item>
+       <item row="4" column="5">
+        <property name="text">
+         <string>Angel Cano</string>
+        </property>
+       </item>
+       <item row="4" column="6">
+        <property name="text">
+         <string>S/ 18.00</string>
+        </property>
+       </item>
+       <item row="4" column="7">
+        <property name="text">
+         <string>25-oct-25</string>
+        </property>
+       </item>
+       <item row="4" column="8">
+        <property name="text">
+         <string>-</string>
+        </property>
+       </item>
+       <item row="5" column="0">
+        <property name="text">
+         <string>01VNT06</string>
+        </property>
+       </item>
+       <item row="5" column="1">
+        <property name="text">
+         <string>VENTA</string>
+        </property>
+       </item>
+       <item row="5" column="2">
+        <property name="text">
+         <string>BEB000205</string>
+        </property>
+       </item>
+       <item row="5" column="3">
+        <property name="text">
+         <string>Néctar Durazno Gloria</string>
+        </property>
+       </item>
+       <item row="5" column="4">
+        <property name="text">
+         <string>CONTADO</string>
+        </property>
+       </item>
+       <item row="5" column="5">
+        <property name="text">
+         <string>Cesar Vargas</string>
+        </property>
+       </item>
+       <item row="5" column="6">
+        <property name="text">
+         <string>S/ 48.00</string>
+        </property>
+       </item>
+       <item row="5" column="7">
+        <property name="text">
+         <string>25-oct-25</string>
+        </property>
+       </item>
+       <item row="5" column="8">
+        <property name="text">
+         <string>Vía Plin</string>
+        </property>
+       </item>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="frame_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>280</y>
+        <width>771</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QPushButton" name="btnModificarVenta">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>20</y>
+         <width>121</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: rgb(85, 170, 0);  /* morado */
+    color: white;               /* texto blanco */
+    font-weight: bold;           /* negrita */
+    border-radius: 5px;          /* bordes redondeados */
+    padding: 5px 10px;           /* padding interno */
+}
+
+QPushButton:hover {
+    background-color: rgb(85, 170, 127);   /* morado más claro al pasar el mouse */
+}</string>
+       </property>
+       <property name="text">
+        <string>✏️ Modificar</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnEliminarVenta">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>20</y>
+         <width>121</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: rgb(85, 170, 0);  /* morado */
+    color: white;               /* texto blanco */
+    font-weight: bold;           /* negrita */
+    border-radius: 5px;          /* bordes redondeados */
+    padding: 5px 10px;           /* padding interno */
+}
+
+QPushButton:hover {
+    background-color: rgb(85, 170, 127);   /* morado más claro al pasar el mouse */
+}</string>
+       </property>
+       <property name="text">
+        <string>❌ Eliminar</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnComprobanteVenta">
+       <property name="geometry">
+        <rect>
+         <x>330</x>
+         <y>20</y>
+         <width>141</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: rgb(85, 170, 0);  /* morado */
+    color: white;               /* texto blanco */
+    font-weight: bold;           /* negrita */
+    border-radius: 5px;          /* bordes redondeados */
+    padding: 5px 10px;           /* padding interno */
+}
+
+QPushButton:hover {
+    background-color: rgb(85, 170, 127);   /* morado más claro al pasar el mouse */
+}</string>
+       </property>
+       <property name="text">
+        <string>📄 Comprobante</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Prestamos / Consignaciones</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>Cotizaciones a Clientes</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Consumos de Almacen</string>
+     </attribute>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>680</y>
+      <width>211</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: transparent;
+    border: none;              /* sin borde */
+    color: white;              /* color del texto o ícono */
+}
+QPushButton:hover {
+    color: #00FFFF;            /* cambia a cian al pasar el mouse (opcional) */
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../Downloads/b84b5982-9300-4371-9353-5ce31953929b.jpeg</normaloff>../Downloads/b84b5982-9300-4371-9353-5ce31953929b.jpeg</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>180</width>
+      <height>180</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnRegresarSalida">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>690</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #8000FF;  /* morado */
+    color: white;               /* texto blanco */
+    font-weight: bold;           /* negrita */
+    border-radius: 5px;          /* bordes redondeados */
+    padding: 5px 10px;           /* padding interno */
+}
+
+QPushButton:hover {
+    background-color: #A64DFF;   /* morado más claro al pasar el mouse */
+}</string>
+    </property>
+    <property name="text">
+     <string>Regresar</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_40">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>700</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Version 2025.1.1</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblTitulo">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>60</y>
+      <width>531</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #000000;       /* negro */
+font-weight: bold;     /* negrita */
+font-family: Arial;    /* opcional, tipo de letra */
+font-size: 20pt;       /* opcional, tamaño */</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; text-decoration: underline;&quot;&gt;REGISTRO DE SALIDAS (INVENTARIO)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_34">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>10</y>
+      <width>168</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;Administrador 🛡️ 09/11/2025&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblHora">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>40</y>
+      <width>200</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #000000;       /* negro */
+font-weight: bold;     /* negrita */
+font-family: Arial;    /* opcional, tipo de letra */
+font-size: 13pt;       /* opcional, tamaño */</string>
+    </property>
+    <property name="text">
+     <string>Hora: 15:46</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>10</y>
+      <width>131</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../Vista/pequeño.jpeg</pixmap>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
